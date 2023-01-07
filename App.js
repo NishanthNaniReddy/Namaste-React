@@ -39,7 +39,8 @@ const Title = () => (
 const HeaderComponent = () => (
     <div>
         {heading}
-        <Title/> //Component inside a component(Component composition)
+        {/* Component inside a component(Component composition) */}
+        <Title/>
         <h1>Namaste React functional component</h1>
         <h2>This is a h2 tag</h2>
     </div>
@@ -48,3 +49,4 @@ const HeaderComponent = () => (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<HeaderComponent/>);
+// root.render(HeaderComponent());
