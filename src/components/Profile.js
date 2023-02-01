@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Profile = (props) => {
   const [count] = useState(0);
+
+  useEffect(() => {}, []);
 
   return (
     <div>

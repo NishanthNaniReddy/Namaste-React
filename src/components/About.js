@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Profile from "./Profile";
 import ProfileClass from "./ProfileClass";
 
-const About = () => {
+const About = (props) => {
   return (
     <div>
       <h1>About Us page</h1>

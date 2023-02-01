@@ -3,6 +3,7 @@ import React from "react";
 class Profile extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
       count: 0,
     };
@@ -17,6 +18,10 @@ class Profile extends React.Component {
 
   componentDidUpdate() {
     console.log("Profile class componentDidUpdate");
+  }
+
+  componentWillUnmount() {
+    console.log("Profile class componentWillUnmount");
   }
 
   render() {
