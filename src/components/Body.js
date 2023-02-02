@@ -1,15 +1,21 @@
 import RestaurantCard from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link, Outlet } from "react-router-dom";
-import { filterData } from "../utils/common";
-import useRestaurantList from "./useRestaurantList";
+import useRestaurantList from "../utils/useRestaurantList";
+import useOnline from "../utils/useOnline";
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
 
-  const { allRestaurants, filteredRestaurants, handelButtonClick } =
+  const [allRestaurants, filteredRestaurants, handelButtonClick] =
     useRestaurantList();
+
+  const offLine = useOnline();
+
+  if (!offLine) {
+    return <h1>🔴 Please check your internet connection</h1>;
+  }
 
   return allRestaurants?.length === 0 ? (
     <Shimmer />

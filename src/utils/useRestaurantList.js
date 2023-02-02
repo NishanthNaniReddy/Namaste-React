@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { GET_RESTAURANT_LIST_URL } from "../config";
-import { filterData } from "../utils/common";
+import { filterData } from "./common";
 
 const useRestaurantList = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -27,11 +27,7 @@ const useRestaurantList = () => {
     setFilteredRestaurants(data);
   });
 
-  return {
-    allRestaurants,
-    filteredRestaurants,
-    handelButtonClick,
-  };
+  return [allRestaurants, filteredRestaurants, handelButtonClick];
 };
 
 export default useRestaurantList;
