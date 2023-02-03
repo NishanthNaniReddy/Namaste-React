@@ -12,11 +12,14 @@ const RestaurantMenu = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="menu">
+      <div className="flex flex-wrap">
         <div>
-          <h1>Restaurant Id: {resId?.id}</h1>
-          <h2>Restaurant Name: {restaurant?.name}</h2>
-          <img src={IMG_CDN_URL + restaurant?.cloudinaryImageId}></img>
+          <h1 className="font-medium">Restaurant Id: {resId?.id}</h1>
+          <h2 className="font-medium">Restaurant Name: {restaurant?.name}</h2>
+          <img
+            className="w-100 p-2 m-2 shadow-lg bg-pink-50"
+            src={IMG_CDN_URL + restaurant?.cloudinaryImageId}
+          ></img>
           <h3>{restaurant?.area}</h3>
           <h3>{restaurant?.city}</h3>
           <h3>{restaurant?.avgRating} stars</h3>
@@ -24,7 +27,7 @@ const RestaurantMenu = () => {
           <h3>{restaurant?.avgRatings}</h3>
         </div>
         <div>
-          <h1>Menu</h1>
+          <h1 className="font-extrabold">Menu</h1>
           <ul>
             {Object.values(restaurant?.menu?.items).map((item) => (
               <li key={item.id}>

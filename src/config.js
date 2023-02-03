@@ -5,7 +5,7 @@ export const FETCH_URL =
   "https://www.swiggy.com/dapi/menu/v4/full?lat=13.0826802&lng=80.2707184&menuId=";
 
 export const GET_RESTAURANT_LIST_URL =
-  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&page_type=DESKTOP_WEB_LISTING";
+  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.62188&lng=79.42755&page_type=DESKTOP_WEB_LISTING";
 
 export const restaurantList = [
   {
